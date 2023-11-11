@@ -1,7 +1,7 @@
+#!/usr/bin/env python3
 import requests
 from bs4 import BeautifulSoup as soup
 import json
-import os
 
 class ClassifiedScraper:
     def __init__(self, url):
@@ -44,6 +44,7 @@ class ClassifiedScraper:
                         href = a_tag.get('href')
                         print(f"https://www.clasificadosonline.com{href}")
                         item_data['link'] = f'https://www.clasificadosonline.com{a_tag.get("href")}'
+
                     print("\n---\n")
                     self.data.append(item_data)
 

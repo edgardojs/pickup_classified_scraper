@@ -29,12 +29,8 @@ def main():
     json_handler = JsonHandler('pickup_data.json')
     scraper = ClassifiedScraper(url)
 
-    # Perform scraping
-    # scraper.scraper()
-
     # Update data in the main script
     json_handler.update_existing_data(scraper.data)
-
 
 if __name__ == "__main__":
     main()
